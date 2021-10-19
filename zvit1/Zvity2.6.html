@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zvity</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style>
+      .span-a + span {
+        color: #f00;
+      }
+
+      .parent {
+        margin-top: 24px;
+      }
+      .parent > .child {
+        color: #00f;
+      }
+
+      p[attr] {
+        color: #0f0;
+      }
+
+      *.text {
+        background-color: rgba(0,0,0, 0.15);
+      }
+    </style>
+    <script src="../script.js"></script>
+  </head>
+  <body>
+    <p class="head">ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br />З ДИСЦИПЛІНИ « РОЗРОБЛЕННЯ WEB-ЗАСТОСУВАННЬ»</p>
+    <p class="title">
+      БРИГАДА № 4<br />
+      Студенти групи ІА-03:<br />
+      Данчук Володимир Валерійович,Сорокiн Денис Юрiйович, Окороков Олексій Владиславович,
+      Александров Олег Едуардович.
+    </p>
+    <div class="square">
+      <img src="../images/5.jpg" class="photo1" />
+      <img src="../images/6.jpg" class="photo2" />
+      <img src="../images/7.jpg" class="photo3" />
+      <img src="../images/8.jpg" class="photo4" />
+    </div>
+    <div class="btn-group">
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №1</button>
+      <button onClick='location.href="Zvity2.1.html"'>Лабораторна робота №2</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №3</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №4</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №5</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №6</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №7</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №8</button>
+      <button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №9</button>
+    </div>
+    <div>
+      <p class="text">Сусідній селектор +</p>
+      <p class="text">
+        <img src="../images/2-6.png" />
+      </p>
+      <span class="span-a text">Елемент span</span>
+      <span class="text">Сусіда</span>
+      <hr />
+      <p class="text">Дочірній Елемент</p>
+      <p class="text">
+        <img src="../images/2-7.png" />
+      </p>
+      <div class="parent text">
+        <div class="child">Текст</div>
+      </div>
+      <hr />
+      <p class="text">Селектор Атрибута</p>
+      <p class="text">
+        <img src="../images/2-8.png" />
+      </p>
+      <p attr="zzz" class="text">Параграф</p>
+      <hr />
+      <p class="text">Універсальний Селектор</p>
+      <p class="text">
+        <img src="../images/2-9.png" />
+      </p>
+    </div>
+    <div class="button4">
+      <button class="button2" onClick='location.href="Zvity2.1.html"'>СПИСКИ</button>
+      <button class="button2" onClick='location.href="Zvity2.2.html"'>ІДЕНТИФІКАТОРИ</button>
+      <button class="button2" onClick='location.href="Zvity2.3.html"'>ВІДСТУПИ</button>
+      <button class="button2" onClick='location.href="Zvity2.4.html"'>ПЛАВАЮЧІ СЕЛЕКТОРИ</button>
+      <button class="button2 dropbtn" onclick="myFunction()">СЕЛЕКТОРИ</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="Zvity2.5.html">Селектори тегу і класу</a>
+        <a href="Zvity2.6.html">Інші селектори</a>
+        <a href="Zvity2.7.html">Групування селекторів</a>
+      </div>
+    </div>
+  </body>
+</html>
