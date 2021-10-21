@@ -6,24 +6,21 @@
 	<title>Zvity</title>
 	<link rel="stylesheet" type="text/css" href="../style.css" />
 	<style>
-		.span-a+span {
+		.class-a {
+			background-color: #9ff;
+		}
+
+		.class-a .a-p-1,
+		.class-a .a-p-2 {
+			font-size: 18px;
+		}
+
+		.class-a .a-p-1 {
 			color: #f00;
 		}
 
-		.parent {
-			margin-top: 24px;
-		}
-
-		.parent>.child {
+		.class-a .a-p-2 {
 			color: #00f;
-		}
-
-		p[attr] {
-			color: #0f0;
-		}
-
-		*.text {
-			background-color: rgba(0, 0, 0, 0.15);
 		}
 
 	</style>
@@ -56,35 +53,7 @@
 		<button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №9</button>
 	</div>
 	<div>
-		<p class="text">Сусідній селектор +</p>
-		<p class="text">
-			<img src="../images/2-6.png" />
-			<img src="../images/2-6-1.png" alt="">
-		</p>
-		<span class="span-a text">Елемент span</span>
-		<span class="text">Сусіда</span>
-		<hr />
-		<p class="text">Дочірній Елемент</p>
-		<p class="text">
-			<img src="../images/2-7.png" />
-			<img src="../images/2-7-1.png" />
-		</p>
-		<div class="parent text">
-			<div class="child">Текст</div>
-		</div>
-		<hr />
-		<p class="text">Селектор Атрибута</p>
-		<p class="text">
-			<img src="../images/2-8.png" />
-			<img src="../images/2-8-1.png" />
-		</p>
-		<p attr="zzz" class="text">Параграф</p>
-		<hr />
-		<p class="text">Універсальний Селектор</p>
-		<p class="text">
-			<img src="../images/2-9.png" />
-			<img src="../images/2-9-1.png" />
-		</p>
+		<p class="text">Висновок: ми опрацювали тему каскадних стилей таблиць, а саме селектори тегу,класу, атрибута, ідентифікатори. Застосували сусідні та дочірні селекти, а також універсальний селектор. Оформили різні елементи HTML коду за допомогою СSS. </p>
 	</div>
 	<div class="button4">
 		<button class="button2" onClick='location.href="Zvity2.9.html"'>МЕТА</button>
