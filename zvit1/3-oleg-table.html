@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		.one {
+			margin-right: 300px;
+			float: right;
+			text-align: center;
+			font-size: 70px;
+			font-weight:bold;
+			margin-top: 10px;
+			font-family: Geneva, Arial, Helvetica, sans-serif;
+		}
+		.two {
+			margin-right: 1300px;
+			float: right;
+			text-align: center;
+			font-size: 70px;
+			font-weight:bold;
+			margin-top: 10px;
+			font-family: Geneva, Arial, Helvetica, sans-serif;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		table {
+			background-color: #fff;
+			width: 100%;
+			border-collapse: separate;
+		}
+
+		tr {
+			border: 0;
+		}
+
+		td {
+			border: 3px solid black;
+			text-align: center;
+		}
+		.intable {
+			border-spacing: 20px;
+			height: 100%;
+		}
+		.outtable {
+			height: 100vh;
+		}
+
+		.background1 {
+			background-color: yellow;
+		}
+
+		.background2 {
+			background-color: blue;
+		}
+
+		.background4 {
+			background-color: red;
+		}
+
+		.square {
+			width: 500px;
+		}
+
+		.intop {
+			height: 100px;
+		}
+
+		.outtop div {
+			width: 500px;
+			height: 60px;
+			background-color: white;
+			border: 3px solid black;
+			margin-left: 20px;
+			margin-top: 10px;
+		}
+
+		.outbottom,
+		.outtop {
+			height: 150px;
+		}
+
+	</style>
+	<table class="outtable">
+		<tr>
+			<td class="background1 outtop" colspan="3"><p class="one">1</p><div />
+				<span></span><p></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="background2 square"><p class="one">2</p></td>
+			<td colspan="2">
+				<table class="intable">
+					<tr class="intop">
+						<td class="background4" colspan="2">
+
+						</td>
+					</tr>
+					<tr>
+						<td class="tdone"><p class="one">3</p></td>
+						<td class="background2 square"><p class="one">4</p></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="background1 outbottom" colspan="3"><p class="two">5</p></td>
+		</tr>
+	</table>
+</body>
+
+</html>

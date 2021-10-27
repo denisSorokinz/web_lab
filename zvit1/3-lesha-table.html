@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			font-size: 40px;
+			color: #fff;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', serif;
+		}
+
+		table {
+			height: 100vh;
+			width: 100%;
+			text-align: center;
+			border-collapse: collapse;
+		}
+
+		td {
+			border: 2px inset #000;
+		}
+
+		.table__top,
+		.table__bottom {
+			background-color: #0066FF;
+			height: 20%;
+		}
+
+		.table__main td {
+			color: #000;
+		}
+
+		.table__main td:nth-child(1),
+		.table__main td:nth-child(3) {
+			background-color: #FFCC00;
+			width: 25%;
+		}
+
+	</style>
+	<table>
+		<tr class="table__top">
+			<td colspan="3">1</td>
+		</tr>
+		<tr class="table__main">
+			<td>5</td>
+			<td>4</td>
+			<td>2</td>
+		</tr>
+		<tr class="table__bottom">
+			<td colspan="3">3</td>
+		</tr>
+	</table>
+</body>
+
+</html>
