@@ -14,7 +14,6 @@
 		}
 
 	</style>
-	<script src="../script.js"></script>
 </head>
 
 <body>
@@ -42,23 +41,61 @@
 		<button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №8</button>
 		<button onClick='location.href="Zvity1.1.html"'>Лабораторна робота №9</button>
 	</div>
-	<div>
-		
-	</div>
-	<div class="button4">
-		<button class="button2" onClick='location.href="Zvity2.9.html"'>МЕТА</button>
-		<button class="button2" onClick='location.href="Zvity2.1.html"'>СПИСКИ</button>
-		<button class="button2" onClick='location.href="Zvity2.2.html"'>ІДЕНТИФІКАТОРИ</button>
-		<button class="button2" onClick='location.href="Zvity2.3.html"'>ВІДСТУПИ</button>
-		<button class="button2" onClick='location.href="Zvity2.4.html"'>ПЛАВАЮЧІ СЕЛЕКТОРИ</button>
-		<button class="button2 dropbtn" onclick="myFunction()">СЕЛЕКТОРИ</button>
-		<div id="myDropdown" class="dropdown-content">
-			<a href="Zvity2.5.html">Селектори тегу і класу</a>
-			<a href="Zvity2.6.html">Інші селектори</a>
-			<a href="Zvity2.7.html">Групування селекторів</a>
+	<div class="content">
+		<div class="menu">
+			<div class="menu__item">
+				<button class="menu__button active" data-block="meta">
+					Мета
+				</button>
+			</div>
+			<div class="menu__item">
+				<button class="menu__button" data-block="ex2">
+					2 завдання
+				</button>
+			</div>
+			<div class="menu__item">
+				<button class="menu__button" data-block="ex4-1">
+					4 завдання (Олексій)
+				</button>
+			</div>
+			<div class="menu__item">
+				<button class="menu__button" data-block="ex4-2">
+					4 завдання (Денис)
+				</button>
+			</div>
+			<div class="menu__item">
+				<button class="menu__button" data-block="ex4-3">
+					4 завдання (Олег)
+				</button>
+			</div>
+			<div class="menu__item">
+				<button class="menu__button" data-block="ex4-4">
+					4 завдання (Вова)
+				</button>
+			</div>
 		</div>
-		<button class="button2" onClick='location.href="Zvity2.8.html"'>ВИСНОВКИ</button>
+		<div class="content__blocks">
+			<div class="content__block active" id="meta">
+				1 блок
+			</div>
+			<div class="content__block" id="ex2">
+				2 блок
+			</div>
+			<div class="content__block" id="ex4-1">
+				3 блок
+			</div>
+			<div class="content__block" id="ex4-2">
+				4 блок
+			</div>
+			<div class="content__block" id="ex4-3">
+				5 блок
+			</div>
+			<div class="content__block" id="ex4-4">
+				6 блок
+			</div>
+		</div>
 	</div>
+	<script src="../script.js"></script>
 </body>
 
 </html>
