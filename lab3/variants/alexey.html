@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div>
+		Input array size: <input type="number" placeholder="Number" id="numInput">
+		<button id="generate">generate</button>
+		<br>
+		<div id="output" />
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const numInput = document.getElementById("numInput")
+			const output = document.getElementById("output")
+			const generateButton = document.getElementById("generate")
+			generateButton.addEventListener("click", () => {
+				if (!Number.isInteger(parseInt(numInput.value))) {
+					alert("Введiть цiле число");
+					return;
+				}
+				const array = generateArray(parseInt(numInput.value))
+				const initArray = array.slice()
+				const maxIdx = initArray.indexOf(Math.max(...array.filter((x, idx) => idx % 2 === 0)))
+				const minIdx = initArray.indexOf(Math.min(...array.filter((x, idx) => idx % 2 === 0)))
+				const swappedArray = array.slice()
+				swappedArray[maxIdx] = initArray[minIdx]
+				swappedArray[minIdx] = initArray[maxIdx]
+				const sortedArray = insertionSort(array.slice())
+				output.innerHTML = `
+					Вхiдний масив: ${initArray}<br />
+					Змінений масив: ${swappedArray}<br />
+					Вихiдний масив: ${sortedArray}<br />
+					Мiнiмальне парне: ${array.slice()[minIdx]}<br />
+					Максимальне парне: ${array.slice()[maxIdx]}<br />
+				`
+			})
+
+			function generateArray(size) {
+				return [...Array(size)].map(item => Math.random() * 1000 | 0)
+			}
+			function insertionSort(inputArr) {
+				let n = inputArr.length;
+				for (let i = 1; i < n; i++) {
+					let current = inputArr[i];
+					let j = i - 1;
+					while ((j > -1) && (current < inputArr[j])) {
+						inputArr[j + 1] = inputArr[j];
+						j--;
+					}
+					inputArr[j + 1] = current;
+				}
+				return inputArr;
+			}
+		})
+	</script>
+</body>
+
+</html>
