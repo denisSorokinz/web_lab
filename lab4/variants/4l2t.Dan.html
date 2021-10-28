@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <style type="text/css">
+      body{
+        background: Thistle ;
+      }
+      .content{
+        background: greenyellow;
+        width: 80%;
+        margin-left: 10%;
+        height: 90vh;
+        margin-top: 25px;
+        border-left: 1px solid;
+        border: 2px solid #D4D4D4;
+        border-radius: 40px;
+        box-shadow: 0 0 15px #5c5c5c; 
+      }
+      h3{
+        text-align: center;
+      }
+      #number {
+        margin-left: 32%;
+        width: 23%;
+      }
+      p{
+        text-align: center;
+        font-size: large;
+      }
+      .inpChild{
+        margin-left: auto;
+        margin-top:auto ;
+        align-items: center;
+        justify-content: center
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="inp">
+        <h3>Введіть кількість елементів масиву</h3>
+        <div class="inpChild">
+          <input type="number" name="number" id="number">
+          <button id="btnImp"> Обчислити </button>
+        </div>
+        <p id="outp"></p>
+        <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const inp = document.getElementById("number");
+        const btnSub = document.getElementById("btnImp");
+        const outp = document.getElementById("outp");
+
+        btnSub.addEventListener("click", () => {
+          const { value: inputValue } = inp;
+
+          if (!inputValue) {
+            alert("Введiть кiлькiсть елементiв масиву");
+            return;
+          }
+
+          const arrLength = Number.parseFloat(inputValue);
+          if (!Number.isInteger(arrLength)) {
+            alert("Введiть цiле число");
+            return;
+          }
+
+          const arr = [...new Array(arrLength)].map(() =>
+            randomIntFromInterval(-100, 100)
+          );
+
+        
+          const outpHTML = `
+            Вхiдний масив: ${arr}<br />
+            Сума елементів між максимальним та мінімальним елементом масиву: ${getSumBetweenMinAndMax(arr)}<br />
+            Вихiдний масив: ${quickSort(arr)}<br />
+          `;
+          outp.innerHTML = outpHTML;
+        });
+      });
+
+      const randomIntFromInterval = (min, max) =>
+        Math.floor(Math.random() * (max - min) + min);
+
+      function quickSort(arr) {
+        if (arr.length < 2) return arr;
+        let pivot = arr[0];
+        const left = [];
+        const right = [];
+    
+        for (let i = 1; i < arr.length; i++) {
+          if (pivot > arr[i]) {
+            left.push(arr[i]);
+          } else {
+            right.push(arr[i]);
+          }
+        }
+        return quickSort(left).concat(pivot, quickSort(right));
+      }
+
+      function getSumBetweenMinAndMax(arr) {
+        let indMax =  arr.indexOf(Math.max.apply(null, arr));
+        let indMin =  arr.indexOf(Math.min.apply(null, arr));
+        var i = Math.min(indMin, indMax) + 1
+        var stop = Math.max(indMin, indMax)
+        var sum = 0;
+        for(i; i <= stop; i++){
+          sum += arr[i];
+          }
+        return sum
+      }
+    </script>
+      </div>
+      <div class="inp">
+        
+      </div>
+    </div>
+  </body>
+</html>

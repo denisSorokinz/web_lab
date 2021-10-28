@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 Denis Sorokin Task 2</title>
+  </head>
+  <body>
+    <label for="width">Введiть ширину зображення:</label>
+    <input type="number" value="240" name="width" id="width" />
+    <label for="height">Введiть висоту зображення:</label>
+    <input type="number" value="240" name="height" id="height" />
+    <label for="loop">Циклiчнiсть перегляду:</label>
+    <input type="checkbox" name="loop" id="loop" />
+    <label for="delay">Час мiж переключеннями (мс):</label>
+    <input type="number" value="1000" name="delay" id="delay" />
+    <button id="initSlider">Iнiцiалiзувати слайдер</button>
+
+    <div id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="./images/1.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="./images/2.png" />
+          </li>
+          <li class="splide__slide">
+            <img src="./images/3.png" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="./splide.min.css" />
+
+    <style>
+      .splide__slide img {
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+
+    <script src="./splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imgWidthInput = document.getElementById("width");
+        const imgHeightInput = document.getElementById("height");
+        const loopCheckbox = document.getElementById("loop");
+        const delayInput = document.getElementById("delay");
+
+        const initSlider = document.getElementById("initSlider");
+        initSlider.addEventListener("click", () => {
+          const imgWidth = Number.parseInt(imgWidthInput.value);
+          const imgHeight = Number.parseInt(imgHeightInput.value);
+          const isLoop = loopCheckbox.checked;
+          const delay = Number.parseInt(delayInput.value);
+
+          if (!(imgWidth && imgHeight && delay)) {
+            alert("Введiть всi значення");
+            return;
+          }
+
+          const splide = new Splide(".splide", {
+            type: isLoop ? "loop" : "slide",
+            autoplay: isLoop,
+            interval: delay,
+          }).mount();
+        });
+      });
+    </script>
+  </body>
+</html>
