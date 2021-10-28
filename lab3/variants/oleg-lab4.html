@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        Length: <input type="text" id="length" value="10">
+    </div>
+    <div>
+        Min: <input type="text" id="min" value="-10">
+    </div>
+    <div>
+        Min: <input type="text" id="max" value="10">
+    </div>
+    <div>
+        <button>Push</button>
+    </div>
+    <p>Вхідний масив:</p>
+    <div id="out"></div>
+    <p>Сума елементів з парними індексами:</p>
+    <div id="out1"></div>
+    <p>Добуток від'ємних елементів:</p>
+    <div id="out2"></div>
+    <p>Максимальний елемент серед додатних чисел:</p>
+    <div id="out3"></div>
+    <p>Індекс максимального елементу серед додатних чисел:</p>
+    <div id="out4"></div>
+    <p>Мінімальний елемент серед елементів з непарними індексами:</p>
+    <div id="out5"></div>
+    <p>Індекс мінімального елемента серед елементів з непарними індексами:</p>
+    <div id="out6"></div>
+    <p>Масив упорядкований у порядку зростання:</p>
+    <div id="out7"></div>
+    <script>
+        document.querySelector('button').onclick = function () {
+            let l = document.querySelector('#length').value;
+            let min = document.querySelector('#min').value;
+            let max = document.querySelector('#max').value;
+            let result = [];
+            let result1 = result;
+            for(let i = 0; i< l; i++) {
+                result.push(randomInteger(min, max));
+            }
+
+            var sum = result.reduce((res, item, index) => {
+                if (index % 2 !== 0) res += item;
+                return res;
+            }, 0);
+
+            var rslt = result.filter(function(number) {
+                return number < 0;
+            });
+
+            var plus = result.filter(function(number) {
+                return number > 0;
+            });
+
+            var prod = 1;
+            rslt.forEach(function(e){prod *= e;});
+            var max_of_array = Math.max.apply(Math, plus);
+            var maxIndex = plus.indexOf( Math.max.apply(null, plus));
+            var b = result.filter((_, index)=>index%2==0);
+            var min_of_array = Math.min.apply(Math, b);
+            var minIndex = b.indexOf( Math.min.apply(null, b));
+            result1.sort(function(a, b) {
+                return a - b;
+            });
+            document.querySelector('#out7').innerHTML = result1;
+            document.querySelector('#out6').innerHTML = minIndex;
+            document.querySelector('#out5').innerHTML = min_of_array;
+            document.querySelector('#out4').innerHTML = maxIndex;
+            document.querySelector('#out3').innerHTML = max_of_array;
+            document.querySelector('#out2').innerHTML = prod;
+            document.querySelector('#out1').innerHTML = sum;
+            document.querySelector('#out').innerHTML = result;
+            return result;
+
+        }
+
+        function randomInteger(min, max) {
+            var rand = min - 0.5 + Math.random() * (max - min + 1)
+            rand = Math.round(rand);
+            return rand;
+        }
+    </script>
+</body>
+</html>

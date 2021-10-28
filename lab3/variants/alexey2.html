@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		form div {
+			display: flex;
+			width: 300px;
+			justify-content: space-between;
+		}
+
+	</style>
+	<form action="#">
+		<div>
+			Login:
+			<input id="login" type="text" required>
+		</div>
+		<div>
+			Password:
+			<input id="password" type="password" required>
+		</div>
+		<div>
+			Repeat password:
+			<input id="passwordRepeat" type="password" required>
+		</div>
+		<div>
+			Date:
+			<input id="date" type="text">
+		</div>
+		<div>
+			Integer:
+			<input id="int" type="text">
+		</div>
+		<div>
+			Real number:
+			<input id="realNum" type="text">
+		</div>
+		<div>
+			<button type="submit" id="submitForm">Register</button>
+		</div>
+	</form>
+	<script>
+		const form = document.querySelector('form')
+		form.addEventListener("submit", (event) => {
+			event.preventDefault()
+			if (!validateForm()) {
+				alert("INVALID INPUT")
+			} else {
+				alert("SUCCESS")
+			}
+		})
+		function validateForm() {
+			const login = document.getElementById("login").value
+			const pass = document.getElementById("password").value
+			const passwordRepeat = document.getElementById("passwordRepeat").value
+			const date = document.getElementById("date").value
+			const int = document.getElementById("int").value
+			const realNum = document.getElementById("realNum").value
+			const dateRegex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
+			if (pass !== passwordRepeat) return false
+			if (!date.match(dateRegex) && date !== "") return false
+			if (!Number.isInteger(Number.parseFloat(int)) && int !== "") return false
+			if (!Number.isFinite(Number.parseFloat(realNum)) && realNum !== "") return false
+			return true
+		}
+	</script>
+</body>
+
+</html>
