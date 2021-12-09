@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>Додати фiльм</span>
+    <br />
+    <form action="./create-film.php" method="post">
+      <label for="film">Назва фiльму</label><br />
+      <input type="text" name="film" id="film" /><br />
+      <label for="genre">Назва жанру</label><br />
+      <input type="text" name="genre" id="genre" /><br />
+      <label for="actors">Актори (роздiленi комою)</label><br />
+      <input type="text" name="actors" id="actors" /><br />
+      <label for="director_first">Iм`я Режисера</label><br />
+      <input type="text" name="director_first" id="director_first" /><br />
+      <label for="director_last">Прiзвище Режисера</label><br />
+      <input type="text" name="director_last" id="director_last" /><br />
+      <button type="submit">Submit</button><br />
+    </form>
+    <br />
+    <a href="./get-all-films.php">Список усiх фiльмiв</a>
+    <br />
+    <span>Пошук фiльму</span>
+    <br />
+    <form action="./get-film-by-name.php" method="post">
+      <label for="film">Назва фiльму</label><br />
+      <input type="text" name="film" id="film" /><br />
+      <button type="submit">Submit</button><br />
+    </form>
+  </body>
+</html>
