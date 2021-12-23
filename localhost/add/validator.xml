@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<validator>
+    <login>
+        <users>
+            <user>vadima</user>
+            <user>vadims</user>
+            <user>vadimas</user>
+        </users>
+        <lenght>
+            5
+        </lenght>
+    </login>
+
+    <password>
+        <lenght>
+            5
+        </lenght>
+        <shoodConsisNum>
+            True
+        </shoodConsisNum>
+    </password>
+
+
+</validator>

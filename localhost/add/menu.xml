@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<menuitem>
+		<menutext>Наш сайт</menutext>
+		<menuhref>https://vognyar.com</menuhref>
+	</menuitem>
+	<menuitem>
+		<menutext>Гугл</menutext>
+		<menuhref>https://google.com/</menuhref>
+	</menuitem>
+	<menuitem>
+		<menutext>КПІ</menutext>
+		<inner_menu>
+			<inner_menuitem>
+				<inner_menutext>Головна сторінка</inner_menutext>
+				<inner_menuhref>https://kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+			<inner_menuitem>
+				<inner_menutext>ФІОТ</inner_menutext>
+				<inner_menuhref>https://fiot.kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+			<inner_menuitem>
+				<inner_menutext>ФПСА</inner_menutext>
+				<inner_menuhref>https://iasa.kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+		</inner_menu>
+	</menuitem>
+	<menuitem>
+		<menutext>Курка гриль - 100 грн.</menutext>
+	</menuitem>
+	<menuitem>
+		<menutext>ПІЦЦИ</menutext>
+		<inner_menu>
+			<inner_menuitem>
+				<inner_menutext>ПІЦЦА З ГРИБАМИ</inner_menutext>
+				<inner_menuhref>https://kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+			<inner_menuitem>
+				<inner_menutext>ПІЦЦА З АНАНАСОМ</inner_menutext>
+				<inner_menuhref>https://fiot.kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+			<inner_menuitem>
+				<inner_menutext>ПІЦЦА З ПІЦЦОЮ</inner_menutext>
+				<inner_menuhref>https://iasa.kpi.ua/</inner_menuhref>
+			</inner_menuitem>
+		</inner_menu>
+	</menuitem>
+</menu>

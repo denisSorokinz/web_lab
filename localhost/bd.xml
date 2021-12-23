@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+	<level number="1">
+		<item>
+			<id>1it1</id>
+			<name>Login</name>
+		</item>
+
+		<item>
+			<id>1it2</id>
+			<name>Administration</name>
+		</item>
+
+		<item>
+			<id>1it3</id>
+			<name>PhotoGalery</name>
+		</item>
+	</level>
+
+	<level number="2">
+		<item>
+			<id>2it1</id>
+			<name>Add hookah</name>
+			<dest>1it2</dest>
+			<href>create.php</href>
+		</item>
+
+		<item>
+			<id>2it2</id>
+			<name>Delete hookah</name>
+			<dest>1it2</dest>
+			<href>deletehookah.php</href>
+		</item>s
+
+		<item>
+			<id>2it3</id>
+			<name>GalleryHook</name>
+			<dest>1it3</dest>
+			<href>/img/PhGallery_Zoom.html</href>
+		</item>
+
+		<item>
+			<id>2it4</id>
+			<name>Scheduler</name>
+			<dest>1it3</dest>
+			<href>/add/diary.php</href>
+		</item>
+	</level>
+</menu>

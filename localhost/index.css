@@ -1,0 +1,167 @@
+.main{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: center;
+  	margin: 0;
+  	background: no-repeat url('../img/kalyan-kurenie.jpg') black;
+}
+
+a{
+	text-decoration: none;
+}
+
+.menu{
+	position: fixed;
+	right: 0.5%;
+	top: 1%;
+	width: 9%;
+	background: ghostwhite;
+	border-radius: 5px;
+	border: solid 2px #333;
+	box-shadow: 10px 5px 5px red;
+	text-align: center !important;
+}
+
+.diss{
+	display: none;
+}
+
+.l1_it{
+	margin-bottom: 2px;
+}
+
+.l2_menu{
+	background: ghostwhite;
+	border-radius: 5px;
+	border: solid 2px #333;
+	position: fixed;
+	right: 10%;
+	top: 4%;
+	text-align: center !important;
+}
+
+ul{
+	list-style-type: none;
+	padding-inline-start: 0;
+	padding: 0 5px 0 5px;
+}
+
+
+
+body{
+	margin: 0;\
+}
+
+.param{
+	margin-left: 5px;
+}
+
+.items{
+	display: flex;
+	flex-direction: column;
+	padding-right: 5px;
+	width: 100%;
+}
+
+.item{
+	border-radius: 5px;
+	text-align: center;
+	background: Turquoise;
+	padding: 1%;
+	align-self: flex-start;
+	border: 1px solid black;
+	height: 510px;
+	margin: 5px 0 10px 10px;
+	min-width: 10%;
+	max-width: 21%;
+}
+
+.rows{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+}
+
+.itemtext{
+	height: 50%;
+	margin-bottom: 5 px;
+}
+
+.welcome{
+	background: red;
+	padding: 1%;
+	border-radius: 10px;
+	margin: 1% 0 3% 0;
+}
+
+.imgitem{
+	max-width: 100%;
+	max-height: 230px;
+}
+
+.welcometext{
+    color: black;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;  
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px grey;
+    margin: 0;
+}
+
+.filtre{
+	background: whitesmoke;
+	border-radius: 3px;
+	margin: 20px 2% 20px 2%;
+	width: 20%;
+	align-self: stretch;
+}
+
+.range{
+	border-radius: 5px;
+	margin: 5px;
+	background: Moccasin;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	min-height: 60vh;
+	background: LightSalmon;
+	border-radius: 8px;
+}
+
+#amount{
+	max-width: 95%;
+	margin-left: 5px;
+	background: Moccasin;
+	color: OrangeRed !important;
+	font-size: 20px;
+}
+
+#slider-range{
+	width: 80%;
+	margin-left: 10%;
+}
+
+
+
+.inpf{
+	background: grey;
+	border-radius: 5px;
+	display: none;
+	text-align: center;
+	position:fixed;
+   top:30%;
+   left:45%;
+   width:250px;
+   height: 250px;
+}
+
+.act{
+	display: block;
+}
